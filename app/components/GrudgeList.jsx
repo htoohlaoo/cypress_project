@@ -45,15 +45,16 @@ export default function GrudgeList(){
             <TextField 
             label="Add Grudge" 
             variant="filled" 
+            data-test='grudge-input'
             value={inputValue}
             onChange={e => setInputValue(e.target.value)}
             style={{backgroundColor: 'white'}}
             />
             </div>
-            <Button onClick={addGrudge}>
+            <Button data-test='grudge-btn' onClick={addGrudge}>
                 Add Grudge
             </Button>
-            <ul style={{color: 'white', listStyleType: 'none'}}>
+            <ul style={{color: 'white', listStyleType: 'none'}} data-test="list">
                 {
                     grudges.length > 0 && (
                         grudges.map((g) => {

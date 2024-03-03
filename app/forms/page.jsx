@@ -40,6 +40,7 @@ export default function FormsPage(){
             <h1 className={styles.header}>Testing Forms</h1>
             <ItemsAccordion items={items} />
             <TextField 
+            data-test="email-input"
             className={styles.input} 
             label="Email" 
             variant="filled" 
@@ -58,11 +59,13 @@ export default function FormsPage(){
                     setSubMessage('')
                     setInputValue('');
                 }, 3000)
-            }}>
+            }}
+                data-test='email-btn'
+            >
                 Subscribe
             </Button>
             {
-                subMessage && <p>{subMessage}</p>
+                subMessage && <p >{subMessage}</p>
             }
         </main>
     )
